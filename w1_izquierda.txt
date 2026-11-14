@@ -1,0 +1,7 @@
+# Derivación de w1 por la izquierda (una producción por línea)
+M -> machine id { L }
+L -> T
+T -> id -> id on E ;
+E -> K
+K -> F
+F -> id

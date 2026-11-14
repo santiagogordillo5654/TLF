@@ -1,0 +1,11 @@
+# Gramática para describir máquinas de estados
+# Formato: "A -> X Y Z | W". Los símbolos separados por espacios.
+# Todo símbolo que aparece a la izquierda de una regla es no terminal; los demás son terminales.
+inicio: M
+
+M -> machine id { L }
+L -> T L | T
+T -> id -> id on E ;
+E -> E or K | K
+K -> K and F | F
+F -> id | ( E )
